@@ -1,5 +1,6 @@
 package com.example.javafxalakzat13a;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,6 +86,21 @@ public class AlakzatController {
         if (!newline.isEmpty()) listviewLines.add(newline);
 
         listview_Listview.setItems(listviewLines);
+        listview_Listview.getSelectionModel().selectLast();
+    }
+
+    public void onTorolClick(ActionEvent actionEvent) {
+        ObservableList<String> listviewLines = listview_Listview.getItems();
+        ObservableList<Integer> selectedIndices = listview_Listview.getSelectionModel().getSelectedIndices();
+
+        ObservableList<String> newListviewLines = FXCollections.observableArrayList();
+        for (int i=0; i < listviewLines.size(); i++) {
+            if (!selectedIndices.contains(i)) {
+                newListviewLines.add(listviewLines.get(i));
+            }
+        }
+
+        listview_Listview.setItems(newListviewLines);
         listview_Listview.getSelectionModel().selectLast();
     }
 }
