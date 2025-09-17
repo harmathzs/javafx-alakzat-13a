@@ -13,20 +13,20 @@
     <VBox maxHeight="250.0" prefHeight="348.0" prefWidth="200">
         <HBox maxHeight="250.0">
             <VBox prefWidth="150">
-                <RadioButton onAction="#onPirosSelected" text="Piros">
+                <RadioButton fx:id="radioPiros" onAction="#onPirosSelected" text="Piros">
                <toggleGroup>
                   <ToggleGroup fx:id="togglegroup_Szin" />
                </toggleGroup></RadioButton>
-                <RadioButton onAction="#onZoldSelected" toggleGroup="$togglegroup_Szin">Zöld</RadioButton>
-                <RadioButton onAction="#onKekSelected" toggleGroup="$togglegroup_Szin">Kék</RadioButton>
+                <RadioButton fx:id="radioZold" onAction="#onZoldSelected" toggleGroup="$togglegroup_Szin">Zöld</RadioButton>
+                <RadioButton fx:id="radioKek" onAction="#onKekSelected" toggleGroup="$togglegroup_Szin">Kék</RadioButton>
             </VBox>
             <VBox prefWidth="150">
-                <RadioButton onAction="#onNegyzetSelected" text="Négyzet">
+                <RadioButton fx:id="radioNegyzet" onAction="#onNegyzetSelected" text="Négyzet">
                <toggleGroup>
                   <ToggleGroup fx:id="togglegroup_Alak" />
                </toggleGroup></RadioButton>
-                <RadioButton onAction="#onKorSelected" toggleGroup="$togglegroup_Alak">Kör</RadioButton>
-                <RadioButton onAction="#onHaromszogSelected" toggleGroup="$togglegroup_Alak">Háromszög</RadioButton>
+                <RadioButton fx:id="radioKor" onAction="#onKorSelected" toggleGroup="$togglegroup_Alak">Kör</RadioButton>
+                <RadioButton fx:id="radioHaromszog" onAction="#onHaromszogSelected" toggleGroup="$togglegroup_Alak">Háromszög</RadioButton>
             </VBox>
         </HBox>
       <Pane id="pane_Alakzat" fx:id="pane_Alakzat" prefHeight="154.0" prefWidth="200.0">
@@ -39,7 +39,7 @@
       <children>
          <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="270.0">
             <children>
-               <Button minWidth="70.0" mnemonicParsing="false" text="Hozzáad">
+               <Button minWidth="70.0" mnemonicParsing="false" onAction="#onHozzaadClick" text="Hozzáad">
                   <HBox.margin>
                      <Insets bottom="10.0" right="70.0" top="10.0" />
                   </HBox.margin>
