@@ -21,15 +21,15 @@
                 <RadioButton onAction="#onKekSelected" toggleGroup="$togglegroup_Szin">Kék</RadioButton>
             </VBox>
             <VBox prefWidth="150">
-                <RadioButton text="Négyzet">
+                <RadioButton onAction="#onNegyzetSelected" text="Négyzet">
                <toggleGroup>
                   <ToggleGroup fx:id="togglegroup_Alak" />
                </toggleGroup></RadioButton>
-                <RadioButton toggleGroup="$togglegroup_Alak">Kör</RadioButton>
-                <RadioButton toggleGroup="$togglegroup_Alak">Háromszög</RadioButton>
+                <RadioButton onAction="#onKorSelected" toggleGroup="$togglegroup_Alak">Kör</RadioButton>
+                <RadioButton onAction="#onHaromszogSelected" toggleGroup="$togglegroup_Alak">Háromszög</RadioButton>
             </VBox>
         </HBox>
-      <Pane id="pane_Alakzat" fx:id="pane_Alakzat" prefHeight="139.0" prefWidth="200.0">
+      <Pane id="pane_Alakzat" fx:id="pane_Alakzat" prefHeight="154.0" prefWidth="200.0">
          <children>
             <ImageView id="imageview_Alakzat" fx:id="imageview_Alakzat" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
